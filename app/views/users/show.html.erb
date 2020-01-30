@@ -59,7 +59,6 @@
     </tbody>
 
     <tfoot>
-      <!--rowspan:縦結合、colspan：横結合-->
       <tr>
         <td colspan="2">累計日数</td>
         <td colspan="2">総合勤務時間</td>
@@ -68,9 +67,9 @@
       </tr>
       <tr>
         <td colspan="2"><%= @attendances.count %></td>
-        <td colspan="2"></td>
+        <td colspan="2"><%= format_basic_info(@user.work_time).to_f * @worked_sum %></td>
         <td colspan="2"></td>
       </tr>
-    </tfoot>  
+    </tfoot>
   </table>
 </div>
